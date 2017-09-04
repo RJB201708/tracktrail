@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 
 var setupController = require('./server/controllers/setupController.js');
 var userController = require('./server/controllers/userController.js');
+var coordinatesController = require('./server/controllers/coordinatesController.js');
 var config = require('./server/config/dbConnection.js');
 
 mongoose.connect(config.getMongoConnection());
@@ -13,6 +14,7 @@ mongoose.connect(config.getMongoConnection());
 var server = restify.createServer();
 setupController(server, restify, restifyValidator);
 userController(server);
+coordinatesController(server);
 
 server.listen(3000, function() {
     console.log('%s listening at %s', server.name, server.url);
