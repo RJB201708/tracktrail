@@ -15,6 +15,7 @@ var server = restify.createServer();
 setupController(server, restify, restifyValidator);
 userController(server);
 coordinatesController(server);
+//test
 
 server.listen(3000, function() {
     console.log('%s listening at %s', server.name, server.url);
