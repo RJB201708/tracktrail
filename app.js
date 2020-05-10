@@ -10,7 +10,7 @@ var coordinatesController = require('./server/controllers/coordinatesController.
 var config = require('./server/config/dbConnection.js');
 
 mongoose.connect(config.getMongoConnection());
-
+console.log('Connection with mongo successful*************');
 var server = restify.createServer();
 setupController(server, restify, restifyValidator);
 userController(server);

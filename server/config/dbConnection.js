@@ -1,7 +1,7 @@
 module.exports = {
 
     getMongoConnection: function() {
-        return 'mongodb://localhost:27017/tracktrail';
+        return 'mongo://mongo:27017/tracktrail';
     }
 
 }
